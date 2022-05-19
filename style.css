@@ -1,0 +1,106 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: green;
+}
+.dws_wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.email-box {
+	display: flex;
+	height: 45px;
+}
+.email-box input {
+	border: none;
+	outline: none;
+}
+.input-box {
+	background-color: #e2e1e1;
+	font-size: 14px;
+	width: 150px;
+	transition: 0.6s;
+	/* делаем тень в поле input */
+	border-bottom: 4px solid #d2d0d0!important;
+	
+}
+
+/* анимируем движение по наведению */
+.email-box:hover > .input-box,
+.input-box:focus {
+	width: 150px;
+}
+
+.input-box::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box::-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:-ms-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:focus::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:focus::-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:focus:-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+.input-box:focus:-ms-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+
+/* делаем тень у кнопки */
+.wrapper-btn {
+	position: relative;
+}
+.wrapper-btn::after {
+	content: '';
+	display: block;
+	background: #2f2e2e;
+	position: absolute;
+	width: 99%;
+	height: 5px;
+	bottom: -3px;
+	right: 1px;
+	border-radius: 0 0 5px 0;
+}
+
+.btn {
+	background: #383f3f;
+	color: white;
+	text-transform: uppercase;
+	padding: 0 35px;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	height: 45px;
+}
+
+/* делаем тень под блоком с иконкой */
+.ico::after {
+	content: '';
+	position: absolute;
+	width: 95%;
+	height: 5px;
+	bottom: -3px;
+	left: 2px;
+	background: #041a23;
+	border-radius: 0 0 0 5px;
+}
+.ico {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	border-radius: 5px 0 0 5px;
+	background-color: #242a2a;
+}
+.ico::before {
+	content: '';
+	position: absolute;
+	border-top: 10px solid transparent;
+	border-left: 12px solid #242a2a;
+	border-bottom: 10px solid transparent;
+	right: -11px;
+}
+.ico svg {
+	width: 20px;
+}
+.ico path {
+	color: white ;
+}
